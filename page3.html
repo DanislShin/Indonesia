@@ -1,0 +1,149 @@
+<!-- page3.html -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3일차 퀴즈</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>3일차 퀴즈</h1>
+
+    <form id="quizForm">
+      <p>25. "Kretek"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q25" value="a" /> a) 포장</label><br />
+      <label><input type="radio" name="q25" value="b" /> b) 향기</label><br />
+      <label
+        ><input type="radio" name="q25" value="c" /> c) 크레텍 (인도네시아 전통
+        담배)</label
+      ><br />
+      <label><input type="radio" name="q25" value="d" /> d) 혼합 담배</label
+      ><br /><br />
+
+      <p>26. "Mimpi"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q26" value="a" /> a) 여자, 여성</label
+      ><br />
+      <label><input type="radio" name="q26" value="b" /> b) 아버지</label><br />
+      <label><input type="radio" name="q26" value="c" /> c) 꿈</label><br />
+      <label><input type="radio" name="q26" value="d" /> d) 조제자</label
+      ><br /><br />
+
+      <p>27. "Saus"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q27" value="a" /> a) 무덤</label><br />
+      <label><input type="radio" name="q27" value="b" /> b) 선택하다</label
+      ><br />
+      <label><input type="radio" name="q27" value="c" /> c) 소스</label><br />
+      <label><input type="radio" name="q27" value="d" /> d) 향신료</label
+      ><br /><br />
+
+      <p>28. "Peracik"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q28" value="a" /> a) 소리</label><br />
+      <label
+        ><input type="radio" name="q28" value="b" /> b) 조제자, 제조자</label
+      ><br />
+      <label><input type="radio" name="q28" value="c" /> c) 창조하다</label
+      ><br />
+      <label><input type="radio" name="q28" value="d" /> d) 문</label
+      ><br /><br />
+
+      <p>29. "Perempuan"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q29" value="a" /> a) 여자, 여성</label
+      ><br />
+      <label><input type="radio" name="q29" value="b" /> b) 꿈들 (복수형)</label
+      ><br />
+      <label><input type="radio" name="q29" value="c" /> c) 소스실</label><br />
+      <label><input type="radio" name="q29" value="d" /> d) 아버지</label
+      ><br /><br />
+
+      <p>30. "Pelinting"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q30" value="a" /> a) 각인되다</label
+      ><br />
+      <label><input type="radio" name="q30" value="b" /> b) 기분 상하다</label
+      ><br />
+      <label><input type="radio" name="q30" value="c" /> c) 담배 말기</label
+      ><br />
+      <label><input type="radio" name="q30" value="d" /> d) 선택하다</label
+      ><br /><br />
+
+      <p>31. "Tembakau campuran"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q31" value="a" /> a) 배급</label><br />
+      <label><input type="radio" name="q31" value="b" /> b) 혼합 담배</label
+      ><br />
+      <label><input type="radio" name="q31" value="c" /> c) 시장</label><br />
+      <label><input type="radio" name="q31" value="d" /> d) 향기</label
+      ><br /><br />
+
+      <p>32. "Pasar"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q32" value="a" /> a) 조제자</label><br />
+      <label><input type="radio" name="q32" value="b" /> b) 시장</label><br />
+      <label><input type="radio" name="q32" value="c" /> c) 문, 게이트</label
+      ><br />
+      <label><input type="radio" name="q32" value="d" /> d) 담배</label
+      ><br /><br />
+
+      <p>33. "Kuburan"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q33" value="a" /> a) 소리</label><br />
+      <label><input type="radio" name="q33" value="b" /> b) 무덤</label><br />
+      <label><input type="radio" name="q33" value="c" /> c) 자본</label><br />
+      <label><input type="radio" name="q33" value="d" /> d) 꿈</label
+      ><br /><br />
+
+      <p>34. "Peluncuran"의 뜻은 무엇일까요?</p>
+      <label><input type="radio" name="q34" value="a" /> a) 출시</label><br />
+      <label><input type="radio" name="q34" value="b" /> b) 향기</label><br />
+      <label><input type="radio" name="q34" value="c" /> c) 파트너</label><br />
+      <label><input type="radio" name="q34" value="d" /> d) 선택하다</label
+      ><br /><br />
+
+      <button type="button" onclick="checkAnswers()">정답 확인</button>
+    </form>
+
+    <p id="result"></p>
+
+    <button onclick="window.location.href='page4.html'">다음 페이지</button>
+
+    <script>
+      function checkAnswers() {
+        let correctAnswers = {
+          q25: "c",
+          q26: "c",
+          q27: "c",
+          q28: "b",
+          q29: "a",
+          q30: "c",
+          q31: "b",
+          q32: "b",
+          q33: "b",
+          q34: "a",
+        };
+
+        let form = document.getElementById("quizForm");
+        let resultText = "";
+
+        for (let i = 25; i <= 34; i++) {
+          let selected = form.querySelector(`input[name="q${i}"]:checked`);
+          if (selected) {
+            resultText += `문제 ${i}: ${
+              selected.value === correctAnswers[`q${i}`] ? "정답" : "틀렸습니다"
+            }<br>`;
+          }
+        }
+
+        document.getElementById("result").innerHTML = resultText;
+      }
+    </script>
+  </body>
+</html>
