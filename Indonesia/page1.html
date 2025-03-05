@@ -1,167 +1,59 @@
-<!-- page1.html -->
 <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1일차 퀴즈</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 50px;
-      }
-      button {
-        font-size: 18px;
-        padding: 10px 20px;
-        margin: 20px;
-        cursor: pointer;
-      }
-    </style>
+    <title>테스트 1일차</title>
   </head>
   <body>
-    <h1>1일차 퀴즈</h1>
+    <!-- 테스트 내용 -->
+    <h1>1일차 단어 테스트</h1>
+    <!-- 예시로 문제를 하나만 보여드립니다 -->
+    <form id="testForm">
+      <label for="q1">1. "Perawat"의 뜻은 무엇일까요?</label><br />
+      <input type="radio" id="q1a" name="q1" value="a" />
+      <label for="q1a">a) 간호사</label><br />
+      <input type="radio" id="q1b" name="q1" value="b" />
+      <label for="q1b">b) 아버지</label><br />
+      <input type="radio" id="q1c" name="q1" value="c" />
+      <label for="q1c">c) 향기</label><br />
+      <input type="radio" id="q1d" name="q1" value="d" />
+      <label for="q1d">d) 담배</label><br /><br />
 
-    <form id="quizForm">
-      <p>1. "Perawat"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q1" value="a" /> a) 간호사</label><br />
-      <label><input type="radio" name="q1" value="b" /> b) 아버지</label><br />
-      <label><input type="radio" name="q1" value="c" /> c) 향기</label><br />
-      <label><input type="radio" name="q1" value="d" /> d) 담배</label
-      ><br /><br />
-
-      <p>2. "Hal"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q2" value="a" /> a) 것, 사항</label
-      ><br />
-      <label><input type="radio" name="q2" value="b" /> b) 무덤</label><br />
-      <label><input type="radio" name="q2" value="c" /> c) 담배</label><br />
-      <label><input type="radio" name="q2" value="d" /> d) 시장</label
-      ><br /><br />
-
-      <p>3. "Cengkih"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q3" value="a" /> a) 정향 (향신료)</label
-      ><br />
-      <label><input type="radio" name="q3" value="b" /> b) 손에 쥠</label><br />
-      <label><input type="radio" name="q3" value="c" /> c) 세계, 세상</label
-      ><br />
-      <label><input type="radio" name="q3" value="d" /> d) 소스</label
-      ><br /><br />
-
-      <p>4. "Genggaman"의 뜻은 무엇일까요?</p>
-      <label
-        ><input type="radio" name="q4" value="a" /> a) 손에 쥠, 움켜쥠</label
-      ><br />
-      <label><input type="radio" name="q4" value="b" /> b) 코</label><br />
-      <label><input type="radio" name="q4" value="c" /> c) 향기</label><br />
-      <label><input type="radio" name="q4" value="d" /> d) 파트너</label
-      ><br /><br />
-
-      <p>5. "Aroma"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q5" value="a" /> a) 향기, 냄새</label
-      ><br />
-      <label><input type="radio" name="q5" value="b" /> b) 소리</label><br />
-      <label><input type="radio" name="q5" value="c" /> c) 담배</label><br />
-      <label><input type="radio" name="q5" value="d" /> d) 꿈</label
-      ><br /><br />
-
-      <p>6. "Tembakau"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q6" value="a" /> a) 담배</label><br />
-      <label><input type="radio" name="q6" value="b" /> b) 아버지</label><br />
-      <label><input type="radio" name="q6" value="c" /> c) 포장</label><br />
-      <label><input type="radio" name="q6" value="d" /> d) 시장</label
-      ><br /><br />
-
-      <p>7. "Hidung"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q7" value="a" /> a) 코</label><br />
-      <label><input type="radio" name="q7" value="b" /> b) 여자, 여성</label
-      ><br />
-      <label><input type="radio" name="q7" value="c" /> c) 꿈들 (복수형)</label
-      ><br />
-      <label><input type="radio" name="q7" value="d" /> d) 담배 말기</label
-      ><br /><br />
-
-      <p>8. "Suara"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q8" value="a" /> a) 소리</label><br />
-      <label><input type="radio" name="q8" value="b" /> b) 향기</label><br />
-      <label><input type="radio" name="q8" value="c" /> c) 정향 (향신료)</label
-      ><br />
-      <label><input type="radio" name="q8" value="d" /> d) 배급</label
-      ><br /><br />
-
-      <p>9. "Bapak"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q9" value="a" /> a) 아버지</label><br />
-      <label><input type="radio" name="q9" value="b" /> b) 창조하다</label
-      ><br />
-      <label><input type="radio" name="q9" value="c" /> c) 파트너</label><br />
-      <label><input type="radio" name="q9" value="d" /> d) 문</label
-      ><br /><br />
-
-      <p>10. "Dunia"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q10" value="a" /> a) 세계, 세상</label
-      ><br />
-      <label><input type="radio" name="q10" value="b" /> b) 담배 말기</label
-      ><br />
-      <label><input type="radio" name="q10" value="c" /> c) 꿈</label><br />
-      <label><input type="radio" name="q10" value="d" /> d) 소스실</label
-      ><br /><br />
-
-      <p>11. "Kretek"의 뜻은 무엇일까요?</p>
-      <label
-        ><input type="radio" name="q11" value="a" /> a) 크레텍 (인도네시아 전통
-        담배)</label
-      ><br />
-      <label><input type="radio" name="q11" value="b" /> b) 향기</label><br />
-      <label><input type="radio" name="q11" value="c" /> c) 혼합 담배</label
-      ><br />
-      <label><input type="radio" name="q11" value="d" /> d) 포장</label
-      ><br /><br />
-
-      <p>12. "Mimpi"의 뜻은 무엇일까요?</p>
-      <label><input type="radio" name="q12" value="a" /> a) 꿈</label><br />
-      <label><input type="radio" name="q12" value="b" /> b) 여자, 여성</label
-      ><br />
-      <label><input type="radio" name="q12" value="c" /> c) 아버지</label><br />
-      <label><input type="radio" name="q12" value="d" /> d) 조제자</label
-      ><br /><br />
-
-      <button type="button" onclick="checkAnswers()">정답 확인</button>
+      <button type="submit">제출</button>
     </form>
 
     <p id="result"></p>
 
-    <button onclick="window.location.href='page2.html'">다음 페이지</button>
-
     <script>
-      function checkAnswers() {
-        let correctAnswers = {
-          q1: "a",
-          q2: "a",
-          q3: "a",
-          q4: "a",
-          q5: "a",
-          q6: "a",
-          q7: "a",
-          q8: "a",
-          q9: "a",
-          q10: "a",
-          q11: "a",
-          q12: "a",
-        };
+      document
+        .getElementById("testForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-        let form = document.getElementById("quizForm");
-        let resultText = "";
+          const name = localStorage.getItem("userName"); // 사용자 이름 가져오기
+          const currentDate = new Date().toLocaleString(); // 현재 시간
+          let score = 0;
 
-        for (let i = 1; i <= 12; i++) {
-          let selected = form.querySelector(`input[name="q${i}"]:checked`);
-          if (selected) {
-            resultText += `문제 ${i}: ${
-              selected.value === correctAnswers[`q${i}`] ? "정답" : "틀렸습니다"
-            }<br>`;
+          // 답안 체크 (여기서는 단순한 예시로 1번만 체크)
+          const answer1 = document.querySelector('input[name="q1"]:checked');
+          if (answer1 && answer1.value === "a") {
+            // 정답이 "a"라고 가정
+            score += 1;
           }
-        }
 
-        document.getElementById("result").innerHTML = resultText;
-      }
+          // 결과 출력
+          document.getElementById("result").textContent =
+            name + "님의 점수는 " + score + "/1 입니다.";
+
+          // 점수와 정보를 텍스트 파일에 저장
+          const fileContent = `이름: ${name}\n점수: ${score}/1\n시간: ${currentDate}\n\n`;
+          const blob = new Blob([fileContent], { type: "text/plain" });
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = "test_result.txt";
+          link.click();
+        });
     </script>
   </body>
 </html>
