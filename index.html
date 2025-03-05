@@ -5,70 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>베스티온 어학원</title>
     <style>
+      /* 기존 스타일은 그대로 유지 */
       body {
         font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-        color: #343a40;
-        text-align: center;
+        background-color: #f4f4f4; /* 옅은 회색 */
+        color: #333;
         margin: 0;
         padding: 0;
+        text-align: center;
       }
+
       header {
-        background-color: #f6e7b4;
-        padding: 50px 0;
-        color: #6c757d;
-        font-size: 30px;
-        font-weight: bold;
+        background-color: #ffeb3b; /* 노란색 */
+        padding: 30px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
-      section {
-        margin-top: 40px;
-        padding: 30px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+      header h1 {
+        color: #333;
+        font-size: 36px;
+        margin: 0;
       }
-      .instruction {
-        font-size: 18px;
-        color: #6c757d;
-        margin-bottom: 20px;
-      }
-      .btn {
-        background-color: #f6e7b4;
-        color: #343a40;
-        padding: 15px 25px;
+
+      .sub-heading {
+        color: #666;
         font-size: 20px;
+        margin-top: 10px;
+      }
+
+      .content {
+        margin-top: 50px;
+      }
+
+      .image-container {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .image-container img {
+        width: 150px;
+        height: 150px;
+        border-radius: 0%; /* 원형 이미지 */
+        border: 5px solid #ffeb3b;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .button-container {
+        margin-top: 40px;
+      }
+
+      .button-container a {
+        background-color: #ffeb3b; /* 노란색 */
+        color: #333;
         text-decoration: none;
-        border-radius: 10px;
-        margin: 10px;
-        display: inline-block;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 18px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s ease;
       }
-      .btn:hover {
-        background-color: #e4d98c;
+
+      .button-container a:hover {
+        background-color: #fbc02d; /* 조금 더 짙은 노란색 */
       }
+
       footer {
+        background-color: #f4f4f4; /* 회색 */
+        padding: 20px;
         margin-top: 50px;
-        background-color: #f6e7b4;
-        padding: 20px 0;
-        color: #6c757d;
-        font-size: 16px;
+        color: #333;
+        font-size: 14px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        font-size: 18px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        width: 300px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: #ffeb3b; /* 노란색 */
+        color: #333;
+        font-size: 18px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #fbc02d;
       }
     </style>
   </head>
   <body>
-    <header>베스티온 어학원에 오신 것을 환영합니다</header>
-
-    <section>
-      <p class="instruction">
-        단어 테스트를 시작할 테니 알맞은 일자를 골라 주세요.
+    <header>
+      <h1>베스티온 어학원에 오신 것을 환영합니다</h1>
+      <p class="sub-heading">
+        테스트를 시작하려면 이름을 입력하고 일자를 선택해주세요
       </p>
-      <a href="page1.html" class="btn">1일차 퀴즈</a>
-      <a href="page2.html" class="btn">2일차 퀴즈</a>
-      <a href="page3.html" class="btn">3일차 퀴즈</a>
-      <a href="page4.html" class="btn">4일차 퀴즈</a>
-    </section>
+    </header>
 
-    <footer>© 2025 베스티온 어학원 | 모든 권리 보유</footer>
+    <div class="content">
+      <div class="image-container">
+        <img src="간판, 스티커.png" alt="Your Image" />
+        <!-- 원형 이미지 -->
+      </div>
+
+      <!-- 이름 입력 -->
+      <form id="nameForm">
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="이름을 입력하세요"
+          required
+        />
+        <br />
+        <button type="submit">확인</button>
+      </form>
+
+      <div class="button-container" id="dateButtons" style="display: none">
+        <a href="page1.html" onclick="saveName()">1일차</a>
+        <a href="page2.html" onclick="saveName()">2일차</a>
+        <a href="page3.html" onclick="saveName()">3일차</a>
+        <a href="page4.html" onclick="saveName()">4일차</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 베스티온 어학원 | 모든 권리 보유</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("nameForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("nameInput").value;
+          if (name) {
+            localStorage.setItem("userName", name); // 로컬 스토리지에 이름 저장
+            document.getElementById("dateButtons").style.display = "block"; // 버튼 표시
+            document.getElementById("nameForm").style.display = "none"; // 이름 입력 폼 숨기기
+          }
+        });
+
+      function saveName() {
+        const name = localStorage.getItem("userName");
+        localStorage.setItem("userName", name);
+      }
+    </script>
   </body>
 </html>
